@@ -5,12 +5,66 @@ namespace jaytwo.FluentParsing
 {
     public static class ByteArrayParserExtensions
     {
-        public static string UTF8(this IParser<byte[]> value)
+        public static string Hex(this IParser<byte[]> value)
+        {
+            return Hex(value?.OriginalValue);
+        }
+
+        public static string Hex(this ITryParser<byte[]> value)
+        {
+            try
+            {
+                return Hex(value?.OriginalValue);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public static string Hex(this INullableParser<byte[]> value)
+        {
+            if (value?.OriginalValue == null)
+            {
+                return null;
+            }
+
+            return Hex(value?.OriginalValue);
+        }
+
+        public static string Base64(this IParser<byte[]> value)
+        {
+            return Base64(value?.OriginalValue);
+        }
+
+        public static string Base64(this ITryParser<byte[]> value)
+        {
+            try
+            {
+                return Base64(value?.OriginalValue);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public static string Base64(this INullableParser<byte[]> value)
+        {
+            if (value?.OriginalValue == null)
+            {
+                return null;
+            }
+
+            return Base64(value?.OriginalValue);
+        }
+
+        public static string UTF8String(this IParser<byte[]> value)
         {
             return GetString(value?.OriginalValue, Encoding.UTF8);
         }
 
-        public static string UTF8(this ITryParser<byte[]> value)
+        public static string UTF8String(this ITryParser<byte[]> value)
         {
             try
             {
@@ -22,7 +76,7 @@ namespace jaytwo.FluentParsing
             }   
         }
 
-        public static string UTF8(this INullableParser<byte[]> value)
+        public static string UTF8String(this INullableParser<byte[]> value)
         {
             if (value?.OriginalValue == null)
             {
@@ -72,6 +126,26 @@ namespace jaytwo.FluentParsing
             }
 
             return encoding.GetString(bytes, 0, bytes.Length);
+        }
+
+        private static string Hex(byte[] bytes)
+        {
+            if (bytes == null)
+            {
+                throw new ArgumentNullException(nameof(bytes));
+            }
+
+            return BitConverter.ToString(bytes).Replace("-", "");
+        }
+
+        private static string Base64(byte[] bytes)
+        {
+            if (bytes == null)
+            {
+                throw new ArgumentNullException(nameof(bytes));
+            }
+
+            return Convert.ToBase64String(bytes);
         }
     }
 }
