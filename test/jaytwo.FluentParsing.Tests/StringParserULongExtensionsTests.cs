@@ -9,7 +9,7 @@ namespace jaytwo.FluentParsing.Tests
     public class StringParserULongExtensionsTests
     {
         private static readonly string TestString = $"12345";
-        private static readonly ulong TestValue = 12345l;
+        private static readonly ulong TestValue = 12345L;
 
         private static readonly string TestStringCurrency = $"${TestString}";
         private static readonly NumberStyles CurrencyStyle = NumberStyles.AllowCurrencySymbol | NumberStyles.AllowDecimalPoint;

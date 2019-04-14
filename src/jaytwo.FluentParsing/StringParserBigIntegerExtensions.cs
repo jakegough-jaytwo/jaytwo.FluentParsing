@@ -39,7 +39,9 @@ namespace jaytwo.FluentParsing
             }
             else
             {
-                return SystemNumericsBigInteger.Parse(parser?.OriginalValue, style);
+                var formatProvider = Defaults.GetDefaultFormatProvider(style);
+
+                return SystemNumericsBigInteger.Parse(parser?.OriginalValue, style, formatProvider);
             }
         }
 

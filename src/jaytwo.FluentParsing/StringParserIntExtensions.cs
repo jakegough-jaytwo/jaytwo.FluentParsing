@@ -38,7 +38,9 @@ namespace jaytwo.FluentParsing
             }
             else
             {
-                return SystemInt32.Parse(parser?.OriginalValue, style);
+                var formatProvider = Defaults.GetDefaultFormatProvider(style);
+
+                return SystemInt32.Parse(parser?.OriginalValue, style, formatProvider);
             }
         }
 
