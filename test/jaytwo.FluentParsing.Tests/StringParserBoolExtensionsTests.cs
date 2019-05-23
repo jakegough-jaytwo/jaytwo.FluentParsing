@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Numerics;
 using System.Text;
 using Xunit;
@@ -13,8 +13,8 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("TRUE")]
         public void string_Parse_Bool_true(string data)
         {
-            // arrange            
-            
+            // arrange
+
             // act
             var parsed = data.Parse().Bool();
 
@@ -28,7 +28,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("FALSE")]
         public void string_Parse_Bool_false(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().Bool();
@@ -40,7 +40,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Bool_throws_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act & assert
@@ -50,7 +50,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Bool_throws_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -60,7 +60,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Bool_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -73,7 +73,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("TRUE")]
         public void string_Parse_Nullable_Bool_true(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().Nullable().Bool();
@@ -88,7 +88,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("FALSE")]
         public void string_Parse_Nullable_Bool_false(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().Nullable().Bool();
@@ -100,7 +100,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Bool_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -113,7 +113,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Bool_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -126,7 +126,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Bool_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -139,7 +139,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("TRUE")]
         public void string_Parse_Try_Bool_true(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().Try().Bool();
@@ -154,7 +154,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("FALSE")]
         public void string_Parse_Try_Bool_false(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().Try().Bool();
@@ -166,7 +166,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Bool_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -179,7 +179,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Bool_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -192,7 +192,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Bool_ok_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act
@@ -210,7 +210,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("y")]
         public void string_Parse_YesNo_true(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().YesNo();
@@ -227,7 +227,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("n")]
         public void string_Parse_YesNo_false(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().YesNo();
@@ -239,7 +239,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_YesNo_throws_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act & assert
@@ -249,7 +249,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_YesNo_throws_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -259,7 +259,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_YesNo_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -274,7 +274,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("y")]
         public void string_Parse_Nullable_YesNo_true(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().Nullable().YesNo();
@@ -291,7 +291,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("n")]
         public void string_Parse_Nullable_YesNo_false(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().Nullable().YesNo();
@@ -303,7 +303,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_YesNo_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -316,7 +316,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_YesNo_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -329,7 +329,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_YesNo_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -344,7 +344,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("y")]
         public void string_Parse_Try_YesNo_true(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().Try().YesNo();
@@ -361,7 +361,7 @@ namespace jaytwo.FluentParsing.Tests
         [InlineData("n")]
         public void string_Parse_Try_YesNo_false(string data)
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = data.Parse().Try().YesNo();
@@ -373,7 +373,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_YesNo_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -386,7 +386,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_YesNo_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -399,7 +399,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_YesNo_ok_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act

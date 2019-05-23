@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Numerics;
 using System.Text;
@@ -17,7 +17,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Uri()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestString.Parse().Uri();
@@ -29,7 +29,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Uri_throws_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act & assert
@@ -39,7 +39,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Uri_throws_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -49,7 +49,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Uri_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -59,7 +59,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Uri()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestString.Parse().Nullable().Uri();
@@ -71,7 +71,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Uri_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -84,7 +84,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Uri_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -97,7 +97,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Uri_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -107,7 +107,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Uri()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestString.Parse().Try().Uri();
@@ -119,7 +119,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Uri_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -132,7 +132,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Uri_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -145,7 +145,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Uri_ok_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act
@@ -158,7 +158,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Uri_relative()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestStringRelative.Parse().Uri(UriKind.Relative);
@@ -170,7 +170,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Uri_relative_throws_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act & assert
@@ -180,7 +180,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Uri_relative_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -193,7 +193,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Uri_relative_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "http://hello world";
 
             // act & assert
@@ -203,7 +203,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Uri_relative()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestStringRelative.Parse().Nullable().Uri(UriKind.Relative);
@@ -215,7 +215,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Uri_relative_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -228,7 +228,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Uri_relative_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -241,7 +241,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Uri_relative_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "http://hello world";
 
             // act & assert
@@ -251,7 +251,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Uri_relative()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestStringRelative.Parse().Try().Uri(UriKind.Relative);
@@ -263,7 +263,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Uri_relative_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -276,7 +276,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Uri_relative_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -289,7 +289,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Uri_relative_ok_on_full_url()
         {
-            // arrange            
+            // arrange
             string data = "http://hello world";
 
             // act

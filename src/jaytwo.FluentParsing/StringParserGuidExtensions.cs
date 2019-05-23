@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using SystemGuid = System.Guid;
 
 namespace jaytwo.FluentParsing
@@ -22,7 +22,7 @@ namespace jaytwo.FluentParsing
 
         public static SystemGuid? Guid(this ITryParser<string> parser)
         {
-            return (SystemGuid.TryParse(parser?.OriginalValue, out Guid parsedValue))
+            return SystemGuid.TryParse(parser?.OriginalValue, out Guid parsedValue)
                 ? parsedValue
                 : default(Guid?);
         }

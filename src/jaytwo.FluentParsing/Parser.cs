@@ -1,13 +1,13 @@
-﻿namespace jaytwo.FluentParsing
+namespace jaytwo.FluentParsing
 {
     public class Parser<T> : IParser<T>
     {
-        public T OriginalValue { get; }
-
         public Parser(T value)
         {
             OriginalValue = value;
         }
+
+        public T OriginalValue { get; }
 
         public INullableParser<T> Nullable()
         {

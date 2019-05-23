@@ -1,4 +1,5 @@
-﻿using System;
+#pragma warning disable SA1121 // Use built-in type alias
+using System;
 using System.Globalization;
 using SystemInt32 = System.Int32;
 
@@ -46,7 +47,7 @@ namespace jaytwo.FluentParsing
 
         public static SystemInt32? Int(this ITryParser<string> parser)
         {
-            return (SystemInt32.TryParse(parser?.OriginalValue, out SystemInt32 parsedValue))
+            return SystemInt32.TryParse(parser?.OriginalValue, out SystemInt32 parsedValue)
                 ? parsedValue
                 : default(SystemInt32?);
         }
@@ -55,9 +56,10 @@ namespace jaytwo.FluentParsing
         {
             var formatProvider = Defaults.GetDefaultFormatProvider(style);
 
-            return (SystemInt32.TryParse(parser?.OriginalValue, style, formatProvider, out SystemInt32 parsedValue))
+            return SystemInt32.TryParse(parser?.OriginalValue, style, formatProvider, out SystemInt32 parsedValue)
                 ? parsedValue
                 : default(SystemInt32?);
         }
     }
 }
+#pragma warning restore SA1121 // Use built-in type alias

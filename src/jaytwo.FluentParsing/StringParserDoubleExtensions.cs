@@ -1,4 +1,5 @@
-﻿using System;
+#pragma warning disable SA1121 // Use built-in type alias
+using System;
 using System.Globalization;
 using SystemDouble = System.Double;
 
@@ -46,7 +47,7 @@ namespace jaytwo.FluentParsing
 
         public static SystemDouble? Double(this ITryParser<string> parser)
         {
-            return (SystemDouble.TryParse(parser?.OriginalValue, out SystemDouble parsedValue))
+            return SystemDouble.TryParse(parser?.OriginalValue, out SystemDouble parsedValue)
                 ? parsedValue
                 : default(SystemDouble?);
         }
@@ -55,9 +56,10 @@ namespace jaytwo.FluentParsing
         {
             var formatProvider = Defaults.GetDefaultFormatProvider(style);
 
-            return (SystemDouble.TryParse(parser?.OriginalValue, style, formatProvider, out SystemDouble parsedValue))
+            return SystemDouble.TryParse(parser?.OriginalValue, style, formatProvider, out SystemDouble parsedValue)
                 ? parsedValue
                 : default(SystemDouble?);
         }
     }
 }
+#pragma warning restore SA1121 // Use built-in type alias

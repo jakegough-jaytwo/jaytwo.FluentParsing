@@ -1,4 +1,5 @@
-﻿using System;
+#pragma warning disable SA1121 // Use built-in type alias
+using System;
 using System.Globalization;
 using SystemUInt64 = System.UInt64;
 
@@ -46,7 +47,7 @@ namespace jaytwo.FluentParsing
 
         public static SystemUInt64? ULong(this ITryParser<string> parser)
         {
-            return (SystemUInt64.TryParse(parser?.OriginalValue, out SystemUInt64 parsedValue))
+            return SystemUInt64.TryParse(parser?.OriginalValue, out SystemUInt64 parsedValue)
                 ? parsedValue
                 : default(SystemUInt64?);
         }
@@ -55,9 +56,10 @@ namespace jaytwo.FluentParsing
         {
             var formatProvider = Defaults.GetDefaultFormatProvider(style);
 
-            return (SystemUInt64.TryParse(parser?.OriginalValue, style, formatProvider, out SystemUInt64 parsedValue))
+            return SystemUInt64.TryParse(parser?.OriginalValue, style, formatProvider, out SystemUInt64 parsedValue)
                 ? parsedValue
                 : default(SystemUInt64?);
         }
     }
 }
+#pragma warning restore SA1121 // Use built-in type alias

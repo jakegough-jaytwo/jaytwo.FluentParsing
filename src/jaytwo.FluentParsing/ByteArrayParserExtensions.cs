@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 
 namespace jaytwo.FluentParsing
@@ -73,7 +73,7 @@ namespace jaytwo.FluentParsing
             catch
             {
                 return null;
-            }   
+            }
         }
 
         public static string UTF8String(this INullableParser<byte[]> value)
@@ -135,7 +135,7 @@ namespace jaytwo.FluentParsing
                 throw new ArgumentNullException(nameof(bytes));
             }
 
-            return BitConverter.ToString(bytes).Replace("-", "");
+            return BitConverter.ToString(bytes).Replace("-", string.Empty);
         }
 
         private static string Base64(byte[] bytes)

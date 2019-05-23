@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Numerics;
 using System.Text;
@@ -16,8 +16,8 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_BigInteger()
         {
-            // arrange            
-            
+            // arrange
+
             // act
             var parsed = TestString.Parse().BigInteger();
 
@@ -28,7 +28,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_BigInteger_throws_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act & assert
@@ -38,7 +38,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_BigInteger_throws_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -48,7 +48,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_BigInteger_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -58,7 +58,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_BigInteger()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestString.Parse().Nullable().BigInteger();
@@ -70,7 +70,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_BigInteger_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -83,7 +83,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_BigInteger_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -96,7 +96,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_BigInteger_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -106,7 +106,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_BigInteger()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestString.Parse().Try().BigInteger();
@@ -118,7 +118,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_BigInteger_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -131,7 +131,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_BigInteger_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -144,7 +144,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_BigInteger_ok_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act
@@ -157,7 +157,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_BigInteger_Currency()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestStringCurrency.Parse().BigInteger(NumberStyles.AllowCurrencySymbol);
@@ -169,7 +169,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_BigInteger_Currency_throws_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act & assert
@@ -179,7 +179,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_BigInteger_Currency_throws_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -189,7 +189,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_BigInteger_Currency_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -199,7 +199,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_BigInteger_Currency()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestStringCurrency.Parse().Nullable().BigInteger(NumberStyles.AllowCurrencySymbol);
@@ -211,7 +211,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_BigInteger_Currency_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -224,7 +224,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_BigInteger_Currency_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -237,7 +237,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_BigInteger_Currency_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -247,7 +247,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_BigInteger_Currency()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestStringCurrency.Parse().Try().BigInteger(NumberStyles.AllowCurrencySymbol);
@@ -259,7 +259,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_BigInteger_Currency_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -272,7 +272,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_BigInteger_Currency_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -285,7 +285,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_BigInteger_Currency_ok_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act

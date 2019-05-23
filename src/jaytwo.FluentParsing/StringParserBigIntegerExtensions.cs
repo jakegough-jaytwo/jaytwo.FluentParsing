@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Numerics;
 using SystemNumericsBigInteger = System.Numerics.BigInteger;
@@ -47,7 +47,7 @@ namespace jaytwo.FluentParsing
 
         public static SystemNumericsBigInteger? BigInteger(this ITryParser<string> parser)
         {
-            return (SystemNumericsBigInteger.TryParse(parser?.OriginalValue, out SystemNumericsBigInteger parsedValue))
+            return SystemNumericsBigInteger.TryParse(parser?.OriginalValue, out SystemNumericsBigInteger parsedValue)
                 ? parsedValue
                 : default(SystemNumericsBigInteger?);
         }
@@ -56,7 +56,7 @@ namespace jaytwo.FluentParsing
         {
             var formatProvider = Defaults.GetDefaultFormatProvider(style);
 
-            return (SystemNumericsBigInteger.TryParse(parser?.OriginalValue, style, formatProvider, out SystemNumericsBigInteger parsedValue))
+            return SystemNumericsBigInteger.TryParse(parser?.OriginalValue, style, formatProvider, out SystemNumericsBigInteger parsedValue)
                 ? parsedValue
                 : default(SystemNumericsBigInteger?);
         }

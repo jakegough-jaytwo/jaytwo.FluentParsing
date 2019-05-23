@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using SystemEnum = System.Enum;
 
@@ -6,15 +6,18 @@ namespace jaytwo.FluentParsing
 {
     public static class StringParserEnumExtensions
     {
-        public static T Enum<T>(this IParser<string> parser, bool ignoreCase = true) where T : struct
+        public static T Enum<T>(this IParser<string> parser, bool ignoreCase = true)
+            where T : struct
         {
             ValidateIsEnum<T>();
             return ParseAndCast<T>(parser?.OriginalValue, ignoreCase);
         }
 
-        public static T Enum<T>(this IParser<string> parser) where T : struct => Enum<T>(parser, true);
+        public static T Enum<T>(this IParser<string> parser)
+            where T : struct => Enum<T>(parser, true);
 
-        public static T? Enum<T>(this INullableParser<string> parser, bool ignoreCase = true) where T : struct
+        public static T? Enum<T>(this INullableParser<string> parser, bool ignoreCase = true)
+            where T : struct
         {
             ValidateIsEnum<T>();
 
@@ -26,9 +29,11 @@ namespace jaytwo.FluentParsing
             return ParseAndCast<T>(parser?.OriginalValue, ignoreCase);
         }
 
-        public static T? Enum<T>(this INullableParser<string> parser) where T : struct => Enum<T>(parser, true);
+        public static T? Enum<T>(this INullableParser<string> parser)
+            where T : struct => Enum<T>(parser, true);
 
-        public static T? Enum<T>(this ITryParser<string> parser, bool ignoreCase = true) where T : struct
+        public static T? Enum<T>(this ITryParser<string> parser, bool ignoreCase = true)
+            where T : struct
         {
             ValidateIsEnum<T>();
 
@@ -42,7 +47,8 @@ namespace jaytwo.FluentParsing
             }
         }
 
-        public static T? Enum<T>(this ITryParser<string> parser) where T : struct => Enum<T>(parser, true);
+        public static T? Enum<T>(this ITryParser<string> parser)
+            where T : struct => Enum<T>(parser, true);
 
         private static void ValidateIsEnum<T>()
         {

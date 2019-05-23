@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using SystemDateTime = System.DateTime;
 
@@ -38,14 +38,14 @@ namespace jaytwo.FluentParsing
 
         public static SystemDateTime? DateTime(this ITryParser<string> parser)
         {
-            return (SystemDateTime.TryParse(parser?.OriginalValue, out SystemDateTime parsedValue))
+            return SystemDateTime.TryParse(parser?.OriginalValue, out SystemDateTime parsedValue)
                 ? parsedValue
                 : default(SystemDateTime?);
         }
 
         public static SystemDateTime? DateTime(this ITryParser<string> parser, IFormatProvider formatProvider, DateTimeStyles styles)
         {
-            return (SystemDateTime.TryParse(parser?.OriginalValue, formatProvider, styles, out SystemDateTime parsedValue))
+            return SystemDateTime.TryParse(parser?.OriginalValue, formatProvider, styles, out SystemDateTime parsedValue)
                 ? parsedValue
                 : default(SystemDateTime?);
         }

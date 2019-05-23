@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
@@ -25,7 +25,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Enum_throws_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act & assert
@@ -35,7 +35,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Enum_throws_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -45,7 +45,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Enum_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -71,7 +71,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Enum_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -84,7 +84,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Enum_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -97,7 +97,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Enum_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -124,7 +124,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Enum_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -137,7 +137,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Enum_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -150,7 +150,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Enum_ok_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Numerics;
 using System.Text;
@@ -17,8 +17,8 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Float()
         {
-            // arrange            
-            
+            // arrange
+
             // act
             var parsed = TestString.Parse().Float();
 
@@ -29,7 +29,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Float_throws_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act & assert
@@ -39,7 +39,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Float_throws_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -49,7 +49,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Float_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -59,7 +59,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Float()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestString.Parse().Nullable().Float();
@@ -71,7 +71,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Float_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -84,7 +84,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Float_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -97,7 +97,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Float_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -107,7 +107,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Float()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestString.Parse().Try().Float();
@@ -119,7 +119,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Float_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -132,7 +132,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Float_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -145,7 +145,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Float_ok_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act
@@ -158,7 +158,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Float_Currency()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestStringCurrency.Parse().Float(CurrencyStyle);
@@ -170,7 +170,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Float_Currency_throws_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act & assert
@@ -180,7 +180,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Float_Currency_throws_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -190,7 +190,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Float_Currency_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -200,7 +200,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Float_Currency()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestStringCurrency.Parse().Nullable().Float(CurrencyStyle);
@@ -212,7 +212,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Float_Currency_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -225,7 +225,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Float_Currency_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -238,7 +238,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Float_Currency_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -248,7 +248,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Float_Currency()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestStringCurrency.Parse().Try().Float(CurrencyStyle);
@@ -260,7 +260,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Float_Currency_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -273,7 +273,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Float_Currency_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -286,7 +286,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Float_Currency_ok_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act

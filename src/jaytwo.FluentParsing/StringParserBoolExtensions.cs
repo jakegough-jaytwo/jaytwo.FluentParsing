@@ -1,4 +1,5 @@
-﻿using System;
+#pragma warning disable SA1121 // Use built-in type alias
+using System;
 using System.Globalization;
 using System.Linq;
 using SystemBoolean = System.Boolean;
@@ -66,7 +67,6 @@ namespace jaytwo.FluentParsing
         public static SystemBoolean Bool(this IParser<string> parser, string[] trueValues, string[] falseValues) => Bool(parser?.OriginalValue, trueValues, falseValues, StringComparison.OrdinalIgnoreCase);
 
         public static SystemBoolean Bool(this IParser<string> parser, string[] trueValues, string[] falseValues, StringComparison stringComparison) => Bool(parser?.OriginalValue, trueValues, falseValues, stringComparison);
-
 
         public static SystemBoolean? Bool(this ITryParser<string> parser, string trueValue, string falseValue)
         {
@@ -156,16 +156,13 @@ namespace jaytwo.FluentParsing
             return Bool(parser?.OriginalValue, trueValues, falseValues, stringComparison);
         }
 
-
         private static SystemBoolean YesNo(string value) => YesNo(value, StringComparison.OrdinalIgnoreCase);
 
         private static SystemBoolean YesNo(string value, StringComparison stringComparison) => Bool(value, new[] { "yes", "y" }, new[] { "no", "n" }, stringComparison);
 
-
         private static SystemBoolean Bool(string value) => Bool(value, StringComparison.OrdinalIgnoreCase);
 
         private static SystemBoolean Bool(string value, StringComparison stringComparison) => Bool(value, SystemBoolean.TrueString, SystemBoolean.FalseString, stringComparison);
-
 
         private static SystemBoolean Bool(string value, string trueValue, string falseValue) => Bool(value, trueValue, falseValue, StringComparison.OrdinalIgnoreCase);
 
@@ -194,3 +191,4 @@ namespace jaytwo.FluentParsing
         }
     }
 }
+#pragma warning restore SA1121 // Use built-in type alias

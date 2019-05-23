@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Numerics;
 using System.Text;
@@ -14,7 +14,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Guid()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestString.Parse().Guid();
@@ -26,7 +26,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Guid_throws_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act & assert
@@ -36,7 +36,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Guid_throws_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act & assert
@@ -46,7 +46,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Guid_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -56,7 +56,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Guid()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestString.Parse().Nullable().Guid();
@@ -68,7 +68,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Guid_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -81,7 +81,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Guid_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -94,7 +94,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Nullable_Guid_throws_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act & assert
@@ -104,7 +104,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Guid()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestString.Parse().Try().Guid();
@@ -116,7 +116,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Guid_ok_on_null()
         {
-            // arrange            
+            // arrange
             string data = null;
 
             // act
@@ -129,7 +129,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Guid_ok_on_empty()
         {
-            // arrange            
+            // arrange
             string data = string.Empty;
 
             // act
@@ -142,7 +142,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void string_Parse_Try_Guid_ok_on_text()
         {
-            // arrange            
+            // arrange
             string data = "hello world";
 
             // act

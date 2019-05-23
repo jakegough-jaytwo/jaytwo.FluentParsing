@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using Xunit;
 
@@ -8,13 +8,13 @@ namespace jaytwo.FluentParsing.Tests
     {
         private static readonly string TestString = "Hello World";
         private static readonly byte[] TestValue = Encoding.UTF8.GetBytes(TestString);
-        private static readonly string TestHexString = BitConverter.ToString(TestValue).Replace("-","");
+        private static readonly string TestHexString = BitConverter.ToString(TestValue).Replace("-", string.Empty);
         private static readonly string TestBase64String = Convert.ToBase64String(TestValue);
 
         [Fact]
         public void bytes_Parse_Base64()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().Base64();
@@ -26,7 +26,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Base64_throws_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act & assert
@@ -36,7 +36,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Base64_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -49,7 +49,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_Base64()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().Nullable().Base64();
@@ -61,7 +61,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_Base64_ok_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act
@@ -74,7 +74,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_Base64_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -87,7 +87,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_Base64()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().Try().Base64();
@@ -99,7 +99,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_Base64_ok_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act
@@ -112,7 +112,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_Base64_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -125,7 +125,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Hex()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().Hex();
@@ -137,7 +137,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Hex_throws_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act & assert
@@ -147,7 +147,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Hex_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -160,7 +160,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_Hex()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().Nullable().Hex();
@@ -172,7 +172,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_Hex_ok_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act
@@ -185,7 +185,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_Hex_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -198,7 +198,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_Hex()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().Try().Hex();
@@ -210,7 +210,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_Hex_ok_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act
@@ -223,7 +223,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_Hex_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -236,7 +236,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_UTF8String()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().UTF8String();
@@ -248,7 +248,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_UTF8String_throws_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act & assert
@@ -258,7 +258,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_UTF8String_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -271,7 +271,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_UTF8String()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().Nullable().UTF8String();
@@ -283,7 +283,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_UTF8String_ok_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act
@@ -296,7 +296,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_UTF8String_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -309,7 +309,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_UTF8String()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().Try().UTF8String();
@@ -321,7 +321,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_UTF8String_ok_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act
@@ -334,7 +334,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_UTF8String_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -347,7 +347,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_String()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().String(Encoding.ASCII);
@@ -359,7 +359,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_String_throws_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act & assert
@@ -369,7 +369,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_String_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -382,7 +382,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_String()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().Nullable().String(Encoding.ASCII);
@@ -394,7 +394,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_String_ok_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act
@@ -407,7 +407,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Nullable_String_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
@@ -420,7 +420,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_String()
         {
-            // arrange            
+            // arrange
 
             // act
             var parsed = TestValue.Parse().Try().String(Encoding.ASCII);
@@ -432,7 +432,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_String_ok_on_null()
         {
-            // arrange            
+            // arrange
             byte[] data = null;
 
             // act
@@ -445,7 +445,7 @@ namespace jaytwo.FluentParsing.Tests
         [Fact]
         public void bytes_Parse_Try_String_ok_on_empty()
         {
-            // arrange            
+            // arrange
             byte[] data = new byte[] { };
 
             // act
